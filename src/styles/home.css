@@ -56,15 +56,15 @@
 
 /* city name */
 .data-value > p:nth-child(1) {
-	@apply text-center text-6xl font-bold tracking-wider transition-all duration-500;
+	@apply text-center text-3xl font-bold tracking-wider transition-all duration-500 md:text-5xl lg:text-6xl;
 }
 
 /* cuaca utama  */
 .data-value > div:nth-child(2) {
-	@apply mb-12 flex justify-center;
+	@apply mb-5 flex justify-center md:mb-12;
 }
 .data-value > div:nth-child(2) > p:nth-child(1) {
-	@apply text-3xl font-bold tracking-wide text-white/50 transition-all duration-500;
+	@apply text-2xl font-bold tracking-wide text-white/50 transition-all duration-500 md:text-3xl;
 }
 
 /* timestemp */
@@ -72,10 +72,10 @@
 	@apply flex flex-row items-center justify-center;
 }
 .data-value > div:nth-child(3) > p:nth-child(2) {
-	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply ml-3 w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
 .data-value > div:nth-child(3) > p:nth-child(3) {
-	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
 
 /* suhu */
@@ -83,10 +83,10 @@
 	@apply flex flex-row items-center justify-center;
 }
 .data-value > div:nth-child(4) > p:nth-child(2) {
-	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply ml-3 w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
 .data-value > div:nth-child(4) > p:nth-child(3) {
-	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
 
 /* kondisi cuaca */
@@ -94,10 +94,10 @@
 	@apply flex flex-row items-center justify-center;
 }
 .data-value > div:nth-child(5) > p:nth-child(2) {
-	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply ml-3 w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
 .data-value > div:nth-child(5) > p:nth-child(3) {
-	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
 
 /* koordinat */
@@ -105,10 +105,10 @@
 	@apply flex flex-row items-center justify-center;
 }
 .data-value > div:nth-child(6) > p:nth-child(2) {
-	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply ml-3 w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
 .data-value > div:nth-child(6) > p:nth-child(3) {
-	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
 
 /* kecepatan angin */
@@ -116,8 +116,8 @@
 	@apply flex flex-row items-center justify-center;
 }
 .data-value > div:nth-child(7) > p:nth-child(2) {
-	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply ml-3 w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
 .data-value > div:nth-child(7) > p:nth-child(3) {
-	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+	@apply w-[40%] text-base font-medium tracking-wide transition-all duration-500 md:text-xl;
 }
