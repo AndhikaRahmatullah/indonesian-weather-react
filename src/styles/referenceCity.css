@@ -1,0 +1,28 @@
+/* .data-title {
+} */
+
+.data-title > p:nth-child(1) {
+	@apply w-1/6 border-r-2 border-white p-3 text-center text-base font-medium text-white md:basis-1/12 md:text-lg;
+}
+.data-title > p:nth-child(2) {
+	@apply w-1/6 border-r-2 border-white p-3 text-center text-base font-medium text-white md:basis-2/12 md:text-lg;
+}
+.data-title > p:nth-child(3) {
+	@apply w-3/6 border-r-2 border-white p-3 text-center text-base font-medium text-white md:basis-7/12 md:text-lg;
+}
+.data-title > p:nth-child(4) {
+	@apply w-1/6 p-3 text-center text-base font-medium text-white md:basis-2/12 md:text-lg;
+}
+
+.data-list > p:nth-child(1) {
+	@apply w-1/6 truncate border-x-2 p-2 text-center text-sm md:basis-1/12 md:text-base;
+}
+.data-list > p:nth-child(2) {
+	@apply w-1/6 truncate border-r-2 p-2 text-center text-sm md:basis-2/12 md:text-base;
+}
+.data-list > p:nth-child(3) {
+	@apply w-3/6 truncate border-r-2 p-2 text-center text-sm md:basis-7/12 md:text-base;
+}
+.data-list > p:nth-child(4) {
+	@apply w-1/6 truncate border-r-2 p-2 text-center text-sm md:basis-2/12 md:text-base;
+}

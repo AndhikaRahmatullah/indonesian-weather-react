@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import useGetDatabase from "../hooks/useGetDatabase";
 import { equalTo, limitToFirst, limitToLast, startAt, startAfter, endAt, endBefore } from "firebase/database";
+import "../styles/referenceCity.css";
 
 const ReferenceCity = () => {
 	const [inputSearch, setInputSearch] = useState(false);
@@ -32,6 +33,15 @@ const ReferenceCity = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		const submitRef = document.getElementById("submitRef");
+
+		if (post.loading) {
+			return submitRef.setAttribute("disabled", "true");
+		}
+		submitRef.removeAttribute("disabled");
+	}, [post.loading]);
+
 	const postQueryLater = () => {
 		const submitRef = document.getElementById("submitRef");
 		submitRef.setAttribute("hidden", "true");
@@ -61,14 +71,12 @@ const ReferenceCity = () => {
 	return (
 		<div className="container my-10">
 			{/* title */}
-			<div className="mb-14 flex flex-col gap-3">
-				<p className="text-4xl font-bold text-primary">Referensi Kota</p>
+			<div className="mb-10 flex w-full flex-col gap-3 md:mb-14 lg:w-2/3">
+				<p className="text-2xl font-bold text-primary md:text-3xl lg:text-4xl">Referensi Kota</p>
 
-				<p className="text-lg font-medium leading-snug">
-					Total 6.590 data kombinasi antara Kota dan Daerah di Indonesia. <span className="block">Terdapat juga beberapa Kota yang sama namun dengan titik koordinat yang berbeda.</span>{" "}
-				</p>
+				<p className="text-base font-medium leading-snug md:text-lg">Total 6.590 data kombinasi antara Kota dan Daerah di Indonesia. Terdapat juga beberapa Kota yang sama namun dengan titik koordinat yang berbeda.</p>
 
-				<p className="text-lg font-medium">
+				<p className="text-base font-medium md:text-lg">
 					Sumber Data :{" "}
 					<a
 						href="https://openweathermap.org/"
@@ -84,7 +92,7 @@ const ReferenceCity = () => {
 				<button
 					onClick={postQueryLater}
 					id="submitRef"
-					className="bg-primary p-2 text-white transition-all duration-300 hover:bg-secondary">
+					className="bg-primary p-2 text-white transition-all duration-300 hover:bg-secondary disabled:bg-neutral-500">
 					Lihat Disini
 				</button>
 
@@ -139,22 +147,28 @@ const ReferenceCity = () => {
 			{/* data */}
 			{!post.loading && dataValue.current ? (
 				<div className="">
-					<div className="flex bg-primary">
-						<p className="basis-1/12 border-r-2 border-white p-3 text-center text-lg font-medium text-white">No</p>
-						<p className="basis-2/12 border-r-2 border-white p-3 text-center text-lg font-medium text-white">ID OWM</p>
-						<p className="basis-7/12 border-r-2 border-white p-3 text-center text-lg font-medium text-white">Kota / Daerah</p>
-						<p className="basis-2/12 p-3 text-center text-lg font-medium text-white">Kode Negara</p>
+					<div className="data-title flex bg-primary">
+						<p className="">No</p>
+						<p className="">
+							ID <span className="hidden md:inline-block">OWM</span>
+						</p>
+						<p className="">
+							Kota <span className="hidden md:inline-block">/ Daerah</span>
+						</p>
+						<p className="">
+							Kode <span className="hidden md:inline-block">Negara</span>
+						</p>
 					</div>
 
 					{dataValue.current.map((item) => {
 						return (
 							<div
 								key={item.id}
-								className="flex items-center border-b-2 transition-all duration-100 hover:bg-neutral-400">
-								<p className="basis-1/12 border-x-2 p-2 text-center">{item.index}</p>
-								<p className="basis-2/12 border-r-2 p-2 text-center">{item.id}</p>
-								<p className="basis-7/12 border-r-2 p-2 text-center">{item.name}</p>
-								<p className="basis-2/12 border-r-2 p-2 text-center">{item.country}</p>
+								className="data-list flex items-center border-b-2 transition-all duration-100 hover:bg-neutral-400">
+								<p className="">{item.index}</p>
+								<p className="">{item.id}</p>
+								<p className="">{item.name}</p>
+								<p className="">{item.country}</p>
 							</div>
 						);
 					})}

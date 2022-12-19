@@ -56,7 +56,7 @@ const Home = () => {
 				bgWeather.classList.add("bg-with-other");
 				bgWeather.classList.remove("bg-with-rain", "bg-with-thunderstorm", "bg-with-clouds", "bg-with-drizzle", "bg-with-other", "bg-with-other");
 			}
-		}, 0);
+		}, 1000);
 	}, [cityDataCurrent]);
 
 	const fetchCity = async (id) => {
