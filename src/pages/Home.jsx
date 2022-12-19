@@ -80,12 +80,12 @@ const Home = () => {
 	return (
 		<div className="container my-10">
 			{/* title */}
-			<div className="mb-14 flex w-3/4 flex-col gap-3">
-				<p className="text-4xl font-bold text-primary">Cuaca Indonesia</p>
+			<div className="mb-14 flex w-full flex-col gap-3 lg:w-3/4">
+				<p className="text-2xl font-bold text-primary md:text-3xl lg:text-4xl">Cuaca Indonesia</p>
 
-				<p className="text-lg font-medium leading-snug">Menyediakan data cuaca terkini dari berbagai Kota dan Daerah di Indonesia. Silahkan masukan kata kunci dengan Nama Kota atau Daerah yang ingin Anda Cari.</p>
+				<p className="text-base font-medium leading-snug md:text-lg">Menyediakan data cuaca terkini dari berbagai Kota dan Daerah di Indonesia. Silahkan masukan kata kunci dengan Nama Kota atau Daerah yang ingin Anda Cari.</p>
 
-				<p className="text-lg font-medium">
+				<p className="text-base font-medium md:text-lg">
 					Sumber Data :{" "}
 					<a
 						href="https://openweathermap.org/"
@@ -97,9 +97,9 @@ const Home = () => {
 			</div>
 
 			{/* layout */}
-			<div className="flex flex-row gap-5">
+			<div className="flex flex-col-reverse gap-5 lg:flex-row">
 				{/* select city */}
-				<div className="relative flex basis-1/2 flex-col gap-1">
+				<div className="relative flex w-full flex-col gap-1 lg:w-1/2">
 					{/* form data */}
 					<form className="relative z-10 flex flex-row items-center">
 						<input
@@ -172,7 +172,7 @@ const Home = () => {
 				</div>
 
 				{/* data values */}
-				<div className={cityName && "h-[600px] w-1/2 basis-1/2 overflow-hidden rounded-md shadow-lg shadow-dark/60"}>
+				<div className={cityName && "h-[500px] w-full overflow-hidden rounded-md shadow-lg shadow-dark/60 md:h-[550px] lg:h-[600px] lg:w-1/2"}>
 					{cityDataCurrent && cityName && (
 						<div
 							id="bgWeather"
@@ -187,7 +187,7 @@ const Home = () => {
 								<img
 									src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/512/external-calendar-weather-smashingstocks-circular-smashing-stocks.png"
 									alt="Updated"
-									className="w-12 transition-all duration-500 group-hover:opacity-0"
+									className="w-10 transition-all duration-500 group-hover:opacity-0 md:w-12"
 								/>
 								<p className="group-hover:opacity-0">Diperbarui Pada</p>
 								<p className="group-hover:opacity-0">: {tempstampConvert(cityDataCurrent.dt)}</p>
@@ -197,7 +197,7 @@ const Home = () => {
 								<img
 									src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/512/external-weather-weather-smashingstocks-circular-smashing-stocks-5.png"
 									alt="Temperature"
-									className="w-12 transition-all duration-500 group-hover:opacity-0"
+									className="w-10 transition-all duration-500 group-hover:opacity-0 md:w-12"
 								/>
 								<p className="group-hover:opacity-0">Suhu Cuaca</p>
 								<p className="group-hover:opacity-0">: {Math.round(cityDataCurrent.main.temp)}&deg;C</p>
@@ -207,7 +207,7 @@ const Home = () => {
 								<img
 									src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/512/external-cloud-weather-smashingstocks-circular-smashing-stocks.png"
 									alt="Weather"
-									className="w-12 transition-all duration-500 group-hover:opacity-0"
+									className="w-10 transition-all duration-500 group-hover:opacity-0 md:w-12"
 								/>
 								<p className="group-hover:opacity-0">Kondisi Cuaca</p>
 								<p className="group-hover:opacity-0">: {capitalLetter(cityDataCurrent.weather[0].description)}</p>
@@ -217,7 +217,7 @@ const Home = () => {
 								<img
 									src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/512/external-placeholder-weather-smashingstocks-circular-smashing-stocks.png"
 									alt="Coordinate"
-									className="w-12 transition-all duration-500 group-hover:opacity-0"
+									className="w-10 transition-all duration-500 group-hover:opacity-0 md:w-12"
 								/>
 								<p className="group-hover:opacity-0">Koordinat</p>
 								<p className="group-hover:opacity-0">
@@ -229,7 +229,7 @@ const Home = () => {
 								<img
 									src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/512/external-windy-weather-smashingstocks-circular-smashing-stocks-5.png"
 									alt="Wind"
-									className="w-12 transition-all duration-500 group-hover:opacity-0"
+									className="w-10 transition-all duration-500 group-hover:opacity-0 md:w-12"
 								/>
 								<p className="group-hover:opacity-0">Kecepatan Angin</p>
 								<p className="group-hover:opacity-0">: {cityDataCurrent.wind.speed} m/s</p>
