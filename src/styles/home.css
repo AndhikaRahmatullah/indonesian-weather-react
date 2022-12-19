@@ -1,0 +1,123 @@
+.list-city-group {
+	@apply flex cursor-pointer flex-row items-center justify-between gap-2 transition-all duration-300 hover:animate-pulse;
+}
+.list-city-name {
+	@apply font-bold tracking-wide text-primary;
+}
+.list-city-coord {
+	@apply text-sm tracking-wide text-white/80;
+}
+
+.data-value {
+	@apply flex h-full w-full flex-col justify-center gap-4 py-5 px-3 text-white transition-all duration-500 hover:scale-110;
+}
+
+.bg-with-rain {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.455)), url("https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
+
+	@apply bg-cover bg-center;
+}
+
+.bg-with-thunderstorm {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.455)), url("https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
+
+	@apply bg-cover bg-center;
+}
+
+.bg-with-snow {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.455)), url("https://images.unsplash.com/photo-1581651842988-eaf2bf5c525a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80");
+
+	@apply bg-cover bg-center;
+}
+
+.bg-with-clouds {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.455)), url("https://images.unsplash.com/photo-1525920980995-f8a382bf42c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+
+	@apply bg-cover bg-center;
+}
+
+.bg-with-drizzle {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.455)), url("https://images.unsplash.com/photo-1608890306831-58efdc14450b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1177&q=80");
+
+	@apply bg-cover bg-center;
+}
+
+.bg-with-clear {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.455)), url("https://images.unsplash.com/photo-1601297183305-6df142704ea2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+
+	@apply bg-cover bg-center;
+}
+
+.bg-with-other {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.455)), url("https://images.unsplash.com/photo-1525891618908-24765267dab7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+
+	@apply bg-cover bg-center;
+}
+
+/* city name */
+.data-value > p:nth-child(1) {
+	@apply text-center text-6xl font-bold tracking-wider transition-all duration-500;
+}
+
+/* cuaca utama  */
+.data-value > div:nth-child(2) {
+	@apply mb-12 flex justify-center;
+}
+.data-value > div:nth-child(2) > p:nth-child(1) {
+	@apply text-3xl font-bold tracking-wide text-white/50 transition-all duration-500;
+}
+
+/* timestemp */
+.data-value > div:nth-child(3) {
+	@apply flex flex-row items-center justify-center;
+}
+.data-value > div:nth-child(3) > p:nth-child(2) {
+	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
+.data-value > div:nth-child(3) > p:nth-child(3) {
+	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
+
+/* suhu */
+.data-value > div:nth-child(4) {
+	@apply flex flex-row items-center justify-center;
+}
+.data-value > div:nth-child(4) > p:nth-child(2) {
+	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
+.data-value > div:nth-child(4) > p:nth-child(3) {
+	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
+
+/* kondisi cuaca */
+.data-value > div:nth-child(5) {
+	@apply flex flex-row items-center justify-center;
+}
+.data-value > div:nth-child(5) > p:nth-child(2) {
+	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
+.data-value > div:nth-child(5) > p:nth-child(3) {
+	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
+
+/* koordinat */
+.data-value > div:nth-child(6) {
+	@apply flex flex-row items-center justify-center;
+}
+.data-value > div:nth-child(6) > p:nth-child(2) {
+	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
+.data-value > div:nth-child(6) > p:nth-child(3) {
+	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
+
+/* kecepatan angin */
+.data-value > div:nth-child(7) {
+	@apply flex flex-row items-center justify-center;
+}
+.data-value > div:nth-child(7) > p:nth-child(2) {
+	@apply ml-3 w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
+.data-value > div:nth-child(7) > p:nth-child(3) {
+	@apply w-[40%] text-xl font-medium tracking-wide transition-all duration-500;
+}
